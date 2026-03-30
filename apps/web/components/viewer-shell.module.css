@@ -1,0 +1,194 @@
+.shell {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px 48px 56px;
+  box-sizing: border-box;
+}
+
+.frame {
+  display: grid;
+  gap: 22px;
+}
+
+.hero,
+.metaPanel,
+.viewerCard {
+  background: #ffffff;
+  border: 1px solid #e7ecf5;
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(25, 35, 58, 0.06);
+}
+
+.hero {
+  padding: 28px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #24479b;
+}
+
+.title {
+  margin: 10px 0 8px;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.copy {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.metaPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #f3f7ff;
+  border: 1px solid #d9e3f0;
+  color: #24479b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.viewerCard {
+  padding: 22px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardHeader span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.openButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #24479b;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.openButton:hover {
+  background: #1c387b;
+  box-shadow: 0 10px 22px rgba(36, 71, 155, 0.2);
+  transform: translateY(-1px);
+}
+
+.documentFrameWrap {
+  position: relative;
+  min-height: 78vh;
+  border: 1px solid #d9e3f0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #f8fbff;
+}
+
+.documentFrame {
+  display: block;
+  width: 100%;
+  height: 78vh;
+  border: 0;
+}
+
+.frameOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 251, 255, 0.92);
+  color: #64748b;
+  font-weight: 700;
+}
+
+.emptyState {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #d7e1f0;
+  border-radius: 18px;
+  color: #708090;
+  text-align: center;
+  padding: 18px;
+}
+
+@media (max-width: 1100px) {
+  .shell {
+    padding: 28px 24px 44px;
+  }
+}
+
+@media (max-width: 720px) {
+  .shell {
+    padding: 20px 16px 32px;
+  }
+
+  .hero,
+  .metaPanel,
+  .viewerCard {
+    border-radius: 22px;
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .headerActions {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .documentFrameWrap,
+  .documentFrame {
+    min-height: 66vh;
+    height: 66vh;
+  }
+}

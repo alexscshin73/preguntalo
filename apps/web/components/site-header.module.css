@@ -1,0 +1,206 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #e9edf5;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.inner {
+  min-height: 110px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.leftCluster {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brandLogo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.tagline {
+  min-width: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #287a1a;
+  line-height: 1.35;
+}
+
+.taglineKo {
+  font-family: "MaruBuri", "Noto Serif KR", "Apple SD Gothic Neo", "Malgun Gothic", Georgia, serif;
+}
+
+.taglineEs {
+  font-family: "MaruBuri", Georgia, serif;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+
+.menuLink {
+  height: 45px;
+  min-width: 45px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menuLink:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 16px rgba(36, 71, 155, 0.18));
+}
+
+.menuLinkActive {
+  filter: drop-shadow(0 4px 10px rgba(36, 71, 155, 0.16));
+}
+
+.langToggle {
+  height: 45px;
+  min-width: 45px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.langToggle:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 16px rgba(36, 71, 155, 0.18));
+}
+
+.actionIcon {
+  width: auto;
+  height: 45px;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+.tooltipWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%) translateY(-2px);
+  background: #1f2a44;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+  z-index: 20;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.tooltipWrapper:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #1f2a44;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    padding: 0 28px;
+    column-gap: 18px;
+  }
+
+  .brandLogo {
+    width: 108px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    min-height: auto;
+    padding: 16px 20px;
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+    justify-items: center;
+  }
+
+  .leftCluster {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .tooltip {
+    bottom: -36px;
+  }
+}

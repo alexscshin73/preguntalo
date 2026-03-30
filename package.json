@@ -1,0 +1,29 @@
+{
+  "name": "preguntalo",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "doctor": "bash scripts/dev_doctor.sh",
+    "dev": "npm run web:dev",
+    "dev:full": "bash scripts/dev_up.sh",
+    "api:dev": "bash scripts/api_dev.sh",
+    "ingest:all": "bash scripts/ingest_all.sh",
+    "web:dev": "bash scripts/web_dev.sh",
+    "web:only": "bash scripts/web_dev.sh",
+    "web:build": "npm run build --workspace web",
+    "public:start": "bash scripts/preguntalo_public_start.sh",
+    "public:stop": "bash scripts/preguntalo_public_stop.sh",
+    "public:status": "bash scripts/preguntalo_public_status.sh",
+    "public:autostart:install": "bash scripts/install_macos_launch_agent.sh",
+    "public:autostart:uninstall": "bash scripts/uninstall_macos_launch_agent.sh",
+    "public:autostart:status": "bash scripts/macos_launch_agent_status.sh",
+    "tunnel:store": "bash scripts/store_cloudflare_tunnel_token.sh",
+    "deploy:up": "docker compose --env-file .env.production -f docker-compose.prod.yml up -d --build",
+    "deploy:down": "docker compose --env-file .env.production -f docker-compose.prod.yml down",
+    "deploy:logs": "docker compose --env-file .env.production -f docker-compose.prod.yml logs -f caddy web api",
+    "docker:up": "docker compose up -d postgres redis minio createbucket",
+    "docker:down": "docker compose down"
+  }
+}

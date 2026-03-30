@@ -1,0 +1,17 @@
+{$APP_DOMAIN} {
+  encode gzip zstd
+
+  @api_proxy path /api/proxy/*
+  handle_path /api/proxy/* {
+    reverse_proxy api:8000
+  }
+
+  @api_direct path /api/v1/*
+  handle @api_direct {
+    reverse_proxy api:8000
+  }
+
+  handle {
+    reverse_proxy web:3000
+  }
+}
