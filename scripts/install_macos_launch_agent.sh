@@ -31,5 +31,5 @@ launchctl kickstart -k "gui/$UID/$LABEL"
 
 echo "Installed launch agent: $TARGET_PATH"
 echo "Label: $LABEL"
-echo "Boot/login behavior: launchd will re-run public:start every 60 seconds."
+echo "Boot/login behavior: launchd now keeps a public supervisor running continuously."
 echo "Status: npm run public:autostart:status"

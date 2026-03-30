@@ -171,7 +171,7 @@ npm run public:autostart:status
 npm run public:autostart:uninstall
 ```
 
-이 자동 실행은 `~/Library/LaunchAgents/com.carroamix.preguntalo.public.plist`를 설치하고, 로그인 직후와 이후 60초마다 `npm run public:start`와 같은 공개 복구 동작을 다시 수행합니다.
+이 자동 실행은 `~/Library/LaunchAgents/com.carroamix.preguntalo.public.plist`를 설치하고, `launchd`가 `preguntalo_public_supervisor.sh`를 계속 실행하도록 등록합니다. Supervisor는 60초 간격으로 API/Web/Tunnel 상태를 확인하면서 필요하면 다시 올립니다.
 
 중요:
 
