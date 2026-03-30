@@ -1,4 +1,5 @@
 # preguntalo
+외부 서비스: https://preguntalo.carroamix.com
 
 `preguntalo`는 복잡한 서비스 매뉴얼을 RAG에 연결해, 사용자가 자연어로 질문하면 답변 초안과 근거 페이지를 함께 보여주는 웹 서비스입니다.
 
