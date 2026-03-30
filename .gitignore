@@ -13,6 +13,8 @@ __pycache__/
 node_modules/
 .next/
 .next-dev/
+.next*/
+*.tsbuildinfo
 dist/
 coverage/
 run/
@@ -20,7 +22,10 @@ run/
 *.pyc
 *.pyo
 *.pyd
+*.db
 
 minio-data/
 postgres-data/
 redis-data/
+
+*.egg-info/

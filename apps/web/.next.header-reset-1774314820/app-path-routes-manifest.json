@@ -1,7 +1,0 @@
-{
-  "/_not-found/page": "/_not-found",
-  "/page": "/",
-  "/manuals/page": "/manuals",
-  "/admin/page": "/admin",
-  "/viewer/[manualId]/[versionId]/page": "/viewer/[manualId]/[versionId]"
-}
