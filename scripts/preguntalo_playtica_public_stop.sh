@@ -16,6 +16,12 @@ stop_pid_file() {
   pid="$(tr -d '\n' < "$path")"
   if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
     kill "$pid" 2>/dev/null || true
+    for _ in $(seq 1 20); do
+      if ! kill -0 "$pid" 2>/dev/null; then
+        break
+      fi
+      sleep 0.5
+    done
   fi
   rm -f "$path"
 }
